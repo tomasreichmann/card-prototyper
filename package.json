@@ -1,0 +1,23 @@
+{
+  "name": "nextjs",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "intersperse": "^1.0.0",
+    "jss": "latest",
+    "lodash": "^4.17.5",
+    "material-ui": "next",
+    "material-ui-icons": "^1.0.0-beta.36",
+    "next": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-jss": "latest"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "next build"
+  }
+}
