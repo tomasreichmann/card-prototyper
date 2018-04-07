@@ -49,12 +49,12 @@ class LayoutUnstyled extends React.Component {
             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
-            <Link href="/" ><Typography variant="title" color="inherit" className={classes.home}>Card Prototyper</Typography></Link>
-            <Link href="/buildings" ><Button color="inherit">Buildings</Button></Link>
-            <Link href="/helper-cards" ><Button color="inherit">Helper cards</Button></Link>
-            <Link href="/units" ><Button color="inherit">Units</Button></Link>
-            <Link href="/opportunities" ><Button color="inherit">Opportunities</Button></Link>
-            <Link href="/events" ><Button color="inherit">Events</Button></Link>
+            <Link href="/" ><Typography component="a" variant="title" color="inherit" className={classes.home}>Card Prototyper</Typography></Link>
+            <Link href="/buildings" ><Button component="a" color="inherit">Buildings</Button></Link>
+            <Link href="/placeholders" ><Button component="a" color="inherit">Placeholders</Button></Link>
+            <Link href="/units" ><Button component="a" color="inherit">Units</Button></Link>
+            <Link href="/opportunities" ><Button component="a" color="inherit">Opportunities</Button></Link>
+            <Link href="/events" ><Button component="a" color="inherit">Events</Button></Link>
           </Toolbar>
         </AppBar>
         <div className={classes.main}>

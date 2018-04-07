@@ -3,22 +3,30 @@
 import { SheetsRegistry } from 'jss';
 import { createMuiTheme, createGenerateClassName } from 'material-ui/styles';
 import lime from 'material-ui/colors/lime';
-import amber from 'material-ui/colors/amber';
+import red from 'material-ui/colors/red';
 
 // A theme with custom primary and secondary color.
 // It's optional.
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: lime[300],
-      main: lime[500],
-      dark: lime[700],
+      light: lime[400],
+      main: lime[600],
+      dark: lime[800],
     },
     secondary: {
-      light: amber[300],
-      main: amber[500],
-      dark: amber[700],
+      light: red[100],
+      main: red[200],
+      dark: red[400],
     },
+  },
+  typography: {
+    fontSize: 12,
+    cardTitle: {
+      fontWeight: 400,
+      textTransform: 'uppercase',
+    },
+    cardFontSize: 10
   },
 });
 

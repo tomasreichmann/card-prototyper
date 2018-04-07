@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { range, set } from 'lodash';
 import { withStyles } from 'material-ui/styles';
 import { grey } from 'material-ui/colors';
+import shuffle from 'shuffle-array';
 
 import Typography from 'material-ui/Typography';
 
@@ -10,7 +11,7 @@ import withRoot from '../src/withRoot';
 
 import { Layout } from '../src/Layout';
 import { PrintSheet } from '../src/PrintSheet';
-import { buildingCards as items } from '../src/cards';
+import { eventCards as items } from '../src/cards';
 
 const styles = theme => ({
   hidePrint: {
@@ -21,13 +22,21 @@ const styles = theme => ({
 });
 
 class Buildings extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+
   render() {
     const { classes } = this.props;
+    const { count } = this.state;
 
     return (
-      <Layout title="Buildings">
-        <Typography style={{textAlign: 'center'}} variant="display1" gutterBottom component="h1" className={classes.hidePrint}>Buildings</Typography>
-        <PrintSheet items={items} itemMargin={0} pageMargin={0.9}/>
+      <Layout >
+        <Typography style={{textAlign: 'center'}} variant="display1" gutterBottom component="h1" className={classes.hidePrint}>Events</Typography>
+        <PrintSheet items={items} itemMargin={0} pageMargin={0.9} itemFormat="pokercard_2_3" itemLandscape/>
       </Layout>
     );
   }

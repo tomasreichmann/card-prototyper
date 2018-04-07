@@ -4,19 +4,24 @@ import intersperse from 'intersperse';
 
 import { grey } from 'material-ui/colors';
 import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-ui/Card';
-import Avatar from 'material-ui/Avatar';
-import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
-import FavoriteIcon from 'material-ui-icons/Favorite';
-import ShareIcon from 'material-ui-icons/Share';
-import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
-import MoreVertIcon from 'material-ui-icons/MoreVert';
+
+import { isNull } from './utils';
 
 const styles = (theme) => ({
   card: {
     height: '100%',
     display: 'flex',
     flexDirection: 'column'
+  },
+  cardTitle: {
+    ...theme.typography.cardTitle
+  },
+  cardText: {
+    fontSize: theme.typography.cardFontSize,
+  },
+  content: {
+    padding: theme.spacing.unit * 2,
   },
   image: {
     flex: 1
@@ -29,13 +34,15 @@ const styles = (theme) => ({
   cost: {
     textAlign: 'right',
     margin: `0 ${-theme.spacing.unit/2}px 0 0`,
+    fontSize: theme.typography.cardFontSize,
   },
   costItem: {
     display: 'inline-block',
     margin: `0 ${theme.spacing.unit/2}px 0 ${theme.spacing.unit/2}px`
   },
   description: {
-    color: grey[600]
+    color: grey[600],
+    fontSize: theme.typography.cardFontSize,
   },
 });
 
@@ -43,34 +50,40 @@ const styles = (theme) => ({
 // "cost": "3k, 1d",
 // "toughness": 3,
 // "requirements": "Lze stavět pouze na Bránu nebo Věž ",
+// "isUnderground": true,
 // "description": "Dává prostor pro jednotku lučištníků, odkud může střílet na nepřítele před hradbami. ",
 // "count": 6
 
 class Building extends React.Component {
   render() {
-    const { classes, name, cost, toughness, requirements, description, image } = this.props;
+    const { classes, name, cost, toughness, requirements, description, image, isUnderground } = this.props;
+
+    const media = <CardMedia
+      className={classes.image}
+      image={image}
+      title={name}
+      subtitle={description}
+    />;
     return (<Card className={classes.card} raised={false}>
-      <CardContent>
+      { isUnderground && media }
+      <CardContent className={classes.content} >
         <div className={classes.header} >
           <div>
-            <Typography component="h2" variant="title" >{name}</Typography>
-            {toughness !== '-' && <Typography variant="subheading" color="textSecondary">Odolnost:&nbsp;{toughness}</Typography> }
+            <Typography component="h2" className={classes.cardTitle} >{name}</Typography>
+            { !isNull(toughness) && <Typography className={classes.cardText} variant="subheading" color="textSecondary">Odolnost:&nbsp;{toughness}</Typography> }
           </div>
-          <Typography component="span" variant="body2" className={classes.cost}>{
-            intersperse(cost.split(/\s*,\s*/).map( (costItem, index) => (
-              <span key={index} className={classes.costItem}>{costItem}</span>
-            ) ))
-          }</Typography>
+          { cost && (
+            <Typography component="span" variant="body2" className={classes.cost}>{
+              intersperse(cost.split(/\s*,\s*/).map( (costItem, index) => (
+                <span key={index} className={classes.costItem}>{costItem}</span>
+              ) ))
+            }</Typography>
+          )}
         </div>
-        <Typography component="p" className={classes.description} gutterBottom={requirements !== '-'}><em>{description}</em></Typography>
-        {requirements !== '-' && <Typography component="p">Požadavky: {requirements}</Typography>}
+        <Typography component="p" className={classes.description} gutterBottom={!isNull(requirements)}><em>{description}</em></Typography>
+        {!isNull(requirements) && <Typography className={classes.cardText} component="p">Požadavky: {requirements}</Typography>}
       </CardContent>
-      <CardMedia
-        className={classes.image}
-        image={image}
-        title={name}
-        subtitle={description}
-      />
+      { !isUnderground && media }
     </Card>);
   }
 }

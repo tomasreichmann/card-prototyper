@@ -10,7 +10,7 @@ import withRoot from '../src/withRoot';
 
 import { Layout } from '../src/Layout';
 import { PrintSheet } from '../src/PrintSheet';
-import { buildingCards as items } from '../src/cards';
+import { placeholderCards } from '../src/cards';
 
 const styles = theme => ({
   hidePrint: {
@@ -25,9 +25,9 @@ class Buildings extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Layout title="Buildings">
-        <Typography style={{textAlign: 'center'}} variant="display1" gutterBottom component="h1" className={classes.hidePrint}>Buildings</Typography>
-        <PrintSheet items={items} itemMargin={0} pageMargin={0.9}/>
+      <Layout>
+        <Typography style={{textAlign: 'center'}} variant="display1" gutterBottom component="h1" className={classes.hidePrint}>Placeholders</Typography>
+        <PrintSheet items={placeholderCards} itemMargin={0} pageMargin={0.9}/>
       </Layout>
     );
   }

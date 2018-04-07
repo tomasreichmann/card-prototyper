@@ -73,7 +73,15 @@ class PrintSheetUnstyled extends React.Component {
       pokercard: {
         width: 6.35,
         height: 8.89
-      }
+      },
+      pokercard_half: {
+        width: 6.35 / 2,
+        height: 8.89 / 2
+      },
+      pokercard_2_3: {
+        width: 6.35 / 3 * 2,
+        height: 8.89 / 3 * 2
+      },
     }
   }
 
@@ -104,8 +112,6 @@ class PrintSheetUnstyled extends React.Component {
     const itemsPerPage = Math.min(itemsPerPageWith * itemsPerPageHeight, limits.itemsPerPage);
 
     const pageCount = Math.min(Math.ceil(items.length / itemsPerPage), limits.pages);
-    console.log('itemsPerPage', itemsPerPage);
-    console.log('pageCount', pageCount);
 
     const { classes, name, cost, toughness, requirements, description } = this.props;
     return (<div className={classes.root}>
