@@ -1,11 +1,13 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
+import Typography from 'material-ui/Typography';
 
 const styles = (theme) => ({
   statItem: {
     display: 'inline-block',
     whiteSpace: 'nowrap',
     textAlign: 'center',
+    verticalAlign: 'middle',
   },
   statIcon: {
     display: 'inline',
@@ -21,11 +23,12 @@ const styles = (theme) => ({
 
 class ResourceUnstyled extends React.Component {
   render() {
-    const { classes, resource, amount } = this.props;
+    const { classes, type, amount } = this.props;
+    console.log('amount', amount);
     return (
       <span className={classes.statItem} >
         <Typography component="span" className={classes.statLabel}>{amount}</Typography>
-        <img className={classes.statIcon} src={`/static/${resource}.png`} />
+        <img className={classes.statIcon} src={`/static/${type}.png`} />
       </span>
     )
   }

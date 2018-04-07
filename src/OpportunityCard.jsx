@@ -5,6 +5,7 @@ import intersperse from 'intersperse';
 import { grey } from 'material-ui/colors';
 import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
+import { RichText } from './RichText';
 
 import { isNull } from './utils';
 
@@ -34,14 +35,6 @@ const styles = (theme) => ({
   },
   header: {
     marginBottom: theme.spacing.unit * 2,
-  },
-  itemList: {
-    margin: `0 ${-theme.spacing.unit/2}px`,
-    fontSize: theme.typography.cardFontSize,
-  },
-  item: {
-    display: 'inline-block',
-    margin: `0 ${theme.spacing.unit/2}px 0 ${theme.spacing.unit/2}px`
   },
   costsAward: {
     display: 'flex',
@@ -95,10 +88,8 @@ class OpportunityCardUnstyled extends React.Component {
             { !isNull(cost) && (
               <div>
                 <Typography component="h3" className={classes.cardSubheading} >Cena</Typography>
-                <Typography component="span" variant="body2" className={classes.itemList}>{
-                  intersperse(cost.split(/\s*,\s*/).map( (item, index) => (
-                    <span key={index} className={classes.item}>{item}</span>
-                  ) ))
+                <Typography component="span" variant="body2" className={classes.cardText}>{
+                  <RichText text={cost} />
                 }</Typography>
               </div>
             )}
@@ -108,10 +99,8 @@ class OpportunityCardUnstyled extends React.Component {
           { !isNull(award) && (
             <div>
               <Typography component="h3" className={classes.cardSubheading} >Odměna</Typography>
-              <Typography component="span" variant="body2" className={classes.itemList}>{
-                intersperse(award.split(/\s*,\s*/).map( (item, index) => (
-                  <span key={index} className={classes.item}>{item}</span>
-                ) ))
+              <Typography component="span" variant="body2" className={classes.cardText}>{
+                <RichText text={award} />
               }</Typography>
             </div>
           )}

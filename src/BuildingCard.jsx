@@ -1,10 +1,13 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
+import classnames from 'classnames';
 import intersperse from 'intersperse';
 
 import { grey } from 'material-ui/colors';
 import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
+import { RichText } from './RichText';
+import { Resource } from './Resource';
 
 import { isNull } from './utils';
 
@@ -15,7 +18,10 @@ const styles = (theme) => ({
     flexDirection: 'column'
   },
   cardTitle: {
-    ...theme.typography.cardTitle
+    ...theme.typography.cardTitle,
+    display: 'inline',
+    marginRight: theme.spacing.unit,
+    verticalAlign: 'middle',
   },
   cardText: {
     fontSize: theme.typography.cardFontSize,
@@ -44,6 +50,9 @@ const styles = (theme) => ({
     color: grey[600],
     fontSize: theme.typography.cardFontSize,
   },
+  inline: {
+    display: 'inline',
+  },
 });
 
 // "name": "Věž",
@@ -69,18 +78,16 @@ class Building extends React.Component {
       <CardContent className={classes.content} >
         <div className={classes.header} >
           <div>
-            <Typography component="h2" className={classes.cardTitle} >{name}</Typography>
-            { !isNull(toughness) && <Typography className={classes.cardText} variant="subheading" color="textSecondary">Odolnost:&nbsp;{toughness}</Typography> }
+            <Typography component="span" className={classes.cardTitle} >{name}</Typography>
+            { !isNull(toughness) && <Resource amount={toughness} type="toughness" /> }
           </div>
           { cost && (
             <Typography component="span" variant="body2" className={classes.cost}>{
-              intersperse(cost.split(/\s*,\s*/).map( (costItem, index) => (
-                <span key={index} className={classes.costItem}>{costItem}</span>
-              ) ))
+              <RichText text={cost}/>
             }</Typography>
           )}
         </div>
-        <Typography component="p" className={classes.description} gutterBottom={!isNull(requirements)}><em>{description}</em></Typography>
+        <Typography component="p" className={classes.description} gutterBottom={!isNull(requirements)}><em><RichText text={description}/></em></Typography>
         {!isNull(requirements) && <Typography className={classes.cardText} component="p">Požadavky: {requirements}</Typography>}
       </CardContent>
       { !isUnderground && media }

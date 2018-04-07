@@ -15,6 +15,8 @@ import withRoot from '../src/withRoot';
 import { PrintSheet } from '../src/PrintSheet';
 import { Layout } from '../src/Layout';
 import { cards } from '../src/cards';
+import { Resource } from '../src/Resource';
+import { RichText } from '../src/RichText';
 
 const styles = theme => (console.log('theme', theme), {
   form: {
@@ -78,7 +80,12 @@ class Index extends React.Component {
 
     return (
       <Layout title="Card Prototyper">
-        <form className={classnames(classes.hidePrint, classes.form)}>
+
+        <p>
+          <RichText text="Umožňuje uskladnit suroviny, které hráči mohou sdílet a nemusí držet v ruce" />
+        </p>
+
+        {/* <form className={classnames(classes.hidePrint, classes.form)}>
           <div className={classes.formGroup}>
             <Typography variant="headline" gutterBottom component="h2" >Cards ({cards.length})</Typography>
             <div className={classes.formGroupElements} >
@@ -158,7 +165,7 @@ class Index extends React.Component {
           </div>
         </form>
         <Divider className={classnames(classes.divider, classes.hidePrint)} />
-        <PrintSheet items={cards} itemMargin={0} itemFormat={card} pageFormat={page} />
+        <PrintSheet items={cards} itemMargin={0} itemFormat={card} pageFormat={page} /> */}
       </Layout>
     );
   }

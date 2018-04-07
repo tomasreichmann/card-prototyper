@@ -7,6 +7,7 @@ import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-
 import Typography from 'material-ui/Typography';
 
 import { isNull } from './utils';
+import { RichText } from './RichText';
 
 const styles = (theme) => ({
   card: {
@@ -39,7 +40,7 @@ class EventCardUnstyled extends React.Component {
     return (<Card className={classes.card} raised={false}>
       <CardContent className={classes.content} >
         <Typography component="h2" className={classes.cardTitle} gutterBottom >{name}</Typography>
-        <Typography component="p" className={classes.description} ><em>{description}</em></Typography>
+        <Typography component="p" className={classes.description} ><em><RichText text={description} /></em></Typography>
       </CardContent>
     </Card>);
   }

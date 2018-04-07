@@ -1,21 +1,33 @@
 export const isNull = (value) => (value === undefined || value === null || value === '-');
 
-export const resourceRegex = /(\d+)x\s*([^\s^]+)/;
+export const resourceStringMap = {
+  'dřevo': 'wood',
+  'kámen': 'stone',
+  'železo': 'metal',
+  'kov': 'metal',
+  'zlato': 'gold',
+  'jídlo': 'food',
+  'útok': 'attack',
+  'obrana': 'defense',
+  'odolnost': 'toughness',
+  'dosah': 'range',
+  'pohyb': 'movement',
+};
+export const resources = Object.keys(resourceStringMap);
+
+export const resourceRegex = new RegExp(`(\\d+)x\\s*(${resources.join('|')})|(\\+?\\-?\\d+)\\s*(${resources.join('|')})`);
+export const resourceRegexNoCapture = new RegExp(`\\d+x\\s*(?:${resources.join('|')})|\\+?\\-?\\d+\\s*(?:${resources.join('|')})`, 'gi');
 
 export const parseResource = (costText) => {
-  const stringMap = {
-    'dřevo': 'wood',
-    'kámen': 'stone',
-    'železo': 'metal',
-    'zlato': 'gold',
-    'jídlo': 'food',
-  };
-  const parsed = resourceRegex.exec(costText);
+  const parsed = costText.match(resourceRegex);
+  console.log('parsed', parsed);
   if (parsed === null) {
     return costText;
   }
-  const [ , amount, typeString] = parsed;
-  const type = stringMap[typeString];
+  const [ , amount1, typeString1, amount2, typeString2] = parsed;
+  const amount = amount1 || amount2;
+  const typeString = typeString1 || typeString2;
+  const type = resourceStringMap[typeString];
   return {
     amount,
     type,

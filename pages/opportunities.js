@@ -21,7 +21,7 @@ const styles = theme => ({
   },
 });
 
-class Buildings extends React.Component {
+class Opportunities extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -42,8 +42,8 @@ class Buildings extends React.Component {
   }
 }
 
-Buildings.propTypes = {
+Opportunities.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withRoot(withStyles(styles)(Buildings));
+export default withRoot(withStyles(styles)(Opportunities));
