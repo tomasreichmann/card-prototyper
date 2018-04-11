@@ -16,12 +16,11 @@ const styles = theme => ({
   },
   page: {
     position: 'relative',
-    display: 'flex',
-    flexWrap: 'wrap',
+    display: 'grid',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    alignContent: 'flex-start',
     pageBreakInside: 'avoid',
-    justifyContent: 'center',
-    alignContent: 'center',
-    alignItems: 'center',
     margin: '0 auto',
     '@media screen': {
       margin: `${theme.spacing.unit * 4}px auto`,
@@ -121,6 +120,7 @@ class PrintSheetUnstyled extends React.Component {
           width: page.width + 'cm',
           height: page.height + 'cm',
           border: `${pageMargin}cm solid ${grey[100]}`,
+          gridTemplateColumns: `repeat(${itemsPerPageWith}, ${item.width}cm)`,
         }}>
           { range(Math.min(items.length - (pageIndex * itemsPerPage), itemsPerPage)).map( itemIndex => (
             <Paper key={itemIndex} elevation={0} className={classes.item} style={{

@@ -84,27 +84,23 @@ class OpportunityCardUnstyled extends React.Component {
         <Typography component="h2" className={classes.cardTitle} gutterBottom >{name}</Typography>
         <Typography component="p" className={classes.description} gutterBottom><em>{description}</em></Typography>
         <div className={classes.costsAward} >
-          <div className={classes.costs} >
-            { !isNull(cost) && (
-              <div>
+          { !isNull(cost) && (
+            <div className={classes.costs} >
                 <Typography component="h3" className={classes.cardSubheading} >Cena</Typography>
                 <Typography component="span" variant="body2" className={classes.cardText}>{
                   <RichText text={cost} />
                 }</Typography>
-              </div>
-            )}
-          </div>
-          <div className={classes.verticalBorder} />
-          <div className={classes.award} >
+            </div>
+          )}
+          { !isNull(cost) && !isNull(award) && <div className={classes.verticalBorder} /> }
           { !isNull(award) && (
-            <div>
+            <div className={classes.award} >
               <Typography component="h3" className={classes.cardSubheading} >Odměna</Typography>
               <Typography component="span" variant="body2" className={classes.cardText}>{
                 <RichText text={award} />
               }</Typography>
             </div>
           )}
-          </div>
         </div>
       </CardContent>
     </Card>);
