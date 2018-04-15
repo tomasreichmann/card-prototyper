@@ -103,8 +103,6 @@ class UnitCardUnstyled extends React.Component {
       image
     } = this.props;
 
-    console.log('this.props', this.props);
-
     const parsedCost = parseCost(cost);
     const costItems = Object.keys(parsedCost).filter( (costKey) => (parsedCost[costKey] > 0) );
     const hasStats = [
@@ -152,7 +150,7 @@ class UnitCardUnstyled extends React.Component {
           </div>
           { costItems.length > 1 && <div className={classes.costs} >
             { costItems.map( (costKey) => (
-              <div className={classes.statItem} >
+              <div key={costKey} className={classes.statItem} >
                 <Typography component="span" className={classes.statLabel}>{parsedCost[costKey]}</Typography>
                 <img className={classes.statIcon} src={`/static/${costKey}.png`} />
               </div>

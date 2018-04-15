@@ -10,7 +10,7 @@ import withRoot from '../src/withRoot';
 
 import { Layout } from '../src/Layout';
 import { PrintSheet } from '../src/PrintSheet';
-import { placeholderCards } from '../src/cards';
+import { characterCards } from '../src/cards';
 
 const styles = theme => ({
   hidePrint: {
@@ -20,21 +20,26 @@ const styles = theme => ({
   },
 });
 
-class Buildings extends React.Component {
+class Characters extends React.Component {
   render() {
     const { classes } = this.props;
 
     return (
       <Layout>
-        <Typography style={{textAlign: 'center'}} variant="display1" gutterBottom component="h1" className={classes.hidePrint}>Placeholders</Typography>
-        <PrintSheet items={placeholderCards} itemMargin={0} pageMargin={0.9}/>
+        <Typography style={{textAlign: 'center'}} variant="display1" gutterBottom component="h1" className={classes.hidePrint}>
+          Characters
+        </Typography>
+        <PrintSheet items={characterCards} itemMargin={0} pageMargin={0} itemFormat={{
+          height: 7.4,
+          width: 10.5
+        }}/>
       </Layout>
     );
   }
 }
 
-Buildings.propTypes = {
+Characters.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withRoot(withStyles(styles)(Buildings));
+export default withRoot(withStyles(styles)(Characters));

@@ -23,11 +23,13 @@ const styles = (theme) => ({
 
 class ResourceUnstyled extends React.Component {
   render() {
-    const { classes, type, amount } = this.props;
-    console.log('amount', amount);
+    const { classes, type, amount, relative } = this.props;
     return (
       <span className={classes.statItem} >
-        <Typography component="span" className={classes.statLabel}>{amount}</Typography>
+        { (amount || relative)
+          ? <Typography component="span" className={classes.statLabel}>{relative}{amount}</Typography>
+          : null
+        }
         <img className={classes.statIcon} src={`/static/${type}.png`} />
       </span>
     )

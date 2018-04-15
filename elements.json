@@ -7,6 +7,9 @@
       "isUnderground": false,
       "requirements": "Musí stát na Bráně nebo Věži",
       "description": "Dává prostor pro jednotku lučištníků, odkud může střílet na nepřítele před hradbami. Dokud není věž zničená, jednotky střelci uvnitř jsou imunní proti nepřátelské střelbě.",
+      "placeholders": 1,
+      "placeholderImage": "jednotka",
+      "placeholderDescription": "-",
       "count": 6,
       "image": "https://c1.staticflickr.com/4/3106/2597484656_7438cefe33_b.jpg"
     },
@@ -16,288 +19,367 @@
       "toughness": 3,
       "isUnderground": true,
       "requirements": "Musí stát pod polem cesty hned za Branou",
-      "description": "Nepřátelé nemohou překročit příkop dokud ho nepřemostí. To mohou udělat jen pěší jednotky místo 3x útok",
+      "description": "Nepřátelé nemohou překročit příkop dokud ho nepřemostí. To mohou udělat jen pěší jednotky.",
+      "placeholders": 1,
+      "placeholderImage": "jednotka",
+      "placeholderDescription": "-",
       "count": 2,
       "image": "https://i.imgur.com/H0dsWWc.jpg"
     },
     {
       "name": "Sklad",
       "cost": "1x kámen, 1x dřevo",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": true,
       "requirements": "Musí stát pod nádvořím",
       "description": "Umožňuje uskladnit 2 suroviny, které hráči mohou sdílet a nemusí držet v ruce",
+      "placeholders": 2,
+      "placeholderImage": "surovina",
+      "placeholderDescription": "-",
       "count": 6,
       "image": "https://vignette.wikia.nocookie.net/suikoden/images/a/af/SS_SII_Vault.png/revision/latest?cb=20151217023817"
     },
     {
       "name": "Kasárna",
       "cost": "1x kámen, 2x dřevo",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
       "requirements": "-",
-      "description": "Poskytuje ubytování pro 3 vojenské jednotky. Umožňuje trénovat pěchotu",
-      "count": 2,
+      "description": "Umožňuje trénovat Pěchotu",
+      "placeholders": 0,
+      "placeholderImage": "-",
+      "placeholderDescription": "-",
+      "count": 1,
       "image": "https://pre00.deviantart.net/8d6d/th/pre/f/2014/287/a/8/royal_armory_by_anthonyavon-d81qngc.png"
     },
     {
       "name": "Střelnice",
       "cost": "3x dřevo",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
-      "requirements": "Přízemí",
-      "description": "Umoznuje najímat lukostřelce",
+      "requirements": "Přízemí, Kasárna",
+      "description": "Umoznuje najímat Střelce",
+      "placeholders": 0,
+      "placeholderImage": "-",
+      "placeholderDescription": "-",
       "count": 1,
       "image": "https://pre00.deviantart.net/26ff/th/pre/f/2012/212/a/5/medieval_archers_2_by_dragoroth_stock-d59aupx.jpg"
     },
     {
       "name": "Stáj",
       "cost": "3x dřevo",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
-      "requirements": "Přízemí",
-      "description": "Umožňuje najímat jízdu ",
+      "requirements": "Přízemí, Kasárna",
+      "description": "Umožňuje najímat Jízdu",
+      "placeholders": 0,
+      "placeholderImage": "-",
+      "placeholderDescription": "-",
       "count": 1,
       "image": "https://i.pinimg.com/originals/74/f4/22/74f42266ec9fd31b939b72141efb7958.jpg"
     },
     {
       "name": "Kuchyně",
       "cost": "2x kámen, 1x dřevo, 1x železo",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
       "requirements": "-",
       "description": "Umožňuje skladovat neomezené množství jídla",
+      "placeholders": "all",
+      "placeholderImage": "jídlo",
+      "placeholderDescription": "-",
       "count": 1,
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/0d/60/da/a2/medieval-kitchen.jpg"
     },
     {
       "name": "Jídelní hala",
       "cost": "2x kámen, 2x dřevo, 1x zlato",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
       "requirements": "Kuchyně ",
-      "description": "Umožňuje pořádat hostiny",
+      "description": "Umožňuje pořádat hostiny.",
+      "placeholders": 0,
+      "placeholderImage": "-",
+      "placeholderDescription": "-",
       "count": 1,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Barley_Hall_1.jpg/1200px-Barley_Hall_1.jpg"
     },
     {
       "name": "Lovecký salón",
       "cost": "2x kámen, 2x zlato",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
       "requirements": "-",
-      "description": "Umožňuje pořádat hony",
-      "count": 1,
+      "description": "Umožňuje pořádat hony. 1x za tah můžete vyměnit 1:1 tolik libovolných surovin za jídlo, kolik máte jednotek Jízdy.",
+      "placeholders": 0,
+      "placeholderImage": "-",
+      "placeholderDescription": "-",
+      "count": 0,
       "image": "https://i.pinimg.com/originals/33/17/bd/3317bd89aa03db52bf4477e738438a14.jpg"
     },
     {
       "name": "Pokladnice",
       "cost": "2x kámen, 1x železo",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
       "requirements": "-",
       "description": "Umožňuje uskladnit neomezeně zlata, které mohou hráči sdílet a nemusí ho držet v ruce",
+      "placeholders": "all, 1",
+      "placeholderImage": "zlato, osoba",
+      "placeholderDescription": "-, Výběrčí daní",
       "count": 1,
       "image": "https://orig00.deviantart.net/35ed/f/2014/235/f/e/treasury_by_realnam-d7wda4b.jpg"
     },
     {
       "name": "Komnata",
       "cost": "2x kámen, 2x dřevo, 1x zlato",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
       "requirements": "Kuchyně ",
       "description": "Poskytuje ubytování pro jednu šlechtickou postavu",
+      "placeholders": 1,
+      "placeholderImage": "osoba",
+      "placeholderDescription": "Šlechtic",
       "count": 2,
       "image": "https://image.jimcdn.com/app/cms/image/transf/none/path/s62538e641fc039d1/image/i06641702d2b229c2/version/1517410340/image.jpg"
     },
     {
       "name": "Kaple",
       "cost": "2x kámen, 1x dřevo, 1x zlato",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
       "requirements": "Musí stát v přízemí ",
       "description": "Poskytuje ubytování pro jednu církevní postavu",
+      "placeholders": 1,
+      "placeholderImage": "osoba",
+      "placeholderDescription": "Kněz",
       "count": 1,
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/07/0b/d8/e4/our-medieval-chapel.jpg"
     },
     {
       "name": "Kostel",
       "cost": "2x kámen, 2x dřevo, 1x železo, 2x zlato",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
       "requirements": "Musí stát na Kapli",
-      "description": "Poskytuje ubytování pro další církevní postavu",
+      "description": "Když přijde událost Desátky, dostanete 3x zlato.",
+      "placeholders": 0,
+      "placeholderImage": "-",
+      "placeholderDescription": "-",
       "count": 1,
       "image": "https://pre00.deviantart.net/ab7c/th/pre/f/2013/335/e/6/le_castellet_medieval_church__france__by_marcgc-d6wcp86.jpg"
     },
     {
       "name": "Katedrála",
       "cost": "4x kámen, 2x železo, 4x zlato",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
       "requirements": "Musí stát na Kostelu",
-      "description": "Poskytuje ubytování pro další církevní postavu",
-      "count": 1,
+      "description": "Poražené jednotky lze za 1x zlato a 1x Jídlo konvertovat na vaši stranu. Nelze použít zároveň s Žalářem.",
+      "placeholders": 0,
+      "placeholderImage": "-",
+      "placeholderDescription": "-",
+      "count": 0,
       "image": "https://farm1.staticflickr.com/623/23130836850_6248551d14_o.jpg"
     },
     {
       "name": "Světnice",
       "cost": "1x kámen, 1x dřevo",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
       "requirements": "-",
       "description": "Poskytuje ubytování pro dva řemeslníky",
-      "count": 2,
+      "placeholders": 0,
+      "placeholderImage": "-",
+      "placeholderDescription": "-",
+      "count": 0,
       "image": "http://www.medievalarchaeology.co.uk/wp-content/uploads/Domestic-interior-4.jpg"
     },
     {
       "name": "Dílna",
       "cost": "1x kámen, 2x dřevo, 1x železo",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": false,
       "requirements": "-",
       "description": "Pracovní misto pro jednoho řemeslníka",
+      "placeholders": 1,
+      "placeholderImage": "osoba",
+      "placeholderDescription": "Truhlář / Kaměník / Kovář",
       "count": 4,
       "image": "http://www.umbriaterremusei.it/data/pagine_custom/20160315180847_zecca_2.jpg"
     },
     {
       "name": "Žalář",
       "cost": "1x kámen, 1x dřevo, 1x železo",
-      "toughness": "-",
+      "toughness": 1,
       "isUnderground": true,
       "requirements": "Podzemí",
-      "description": "Za poraženou jednotku dostanete 1x zlato",
+      "description": "Za poraženou jednotku dostanete 1x zlato. Nelze použít zároveň s Katedrálou.",
+      "placeholders": 0,
+      "placeholderImage": "-",
+      "placeholderDescription": "-",
       "count": 1,
       "image": "https://conceptartempire.com/images/08/2592/01-dungeon-corridor-concept-art.jpg"
-    }
-  ],
-  "placeholders": [
+    },
     {
-      "name": "Nádvoří",
-      "description": "Označuje místa, kde se dají stavět budovy",
-      "count": 6,
+      "name": "Tržiště",
+      "cost": "1x kámen, 1x dřevo, 1x železo, 1x jídlo",
       "toughness": "-",
       "isUnderground": true,
+      "requirements": "Nahrazuje jednu kartu Nádvoří",
+      "description": "Umožňuje vyměňovat 4 stejné suroviny za jednu jinou surovinu, nebo zlato",
+      "placeholders": 1,
+      "placeholderImage": "osoba",
+      "placeholderDescription": "Obchodník",
+      "count": 1,
+      "image": "http://www.makesimpledesigns.com/wp-content/uploads/2014/03/Market.jpg"
+    },
+    {
+      "name": "Nádvoří",
+      "cost": "-",
+      "toughness": "-",
+      "isUnderground": true,
+      "requirements": "-",
+      "description": "Budovy můžete stavět nad, pod nebo přímo na Nádvoří",
+      "placeholders": 2,
+      "placeholderImage": "jednotka",
+      "placeholderDescription": "-",
+      "count": 6,
       "image": "https://shannonclarkefinalyearproject.files.wordpress.com/2015/03/castle_courtyard_by_austriaangloalliance-d5x1083.jpg"
     },
     {
       "name": "Cesta",
-      "description": "Označuje místa, kde může stát nepřítelská armáda během obléhání",
-      "count": 6,
+      "cost": "-",
       "toughness": "-",
       "isUnderground": true,
+      "requirements": "-",
+      "description": "Zde můžou stát vojenské jednotky",
+      "placeholders": 2,
+      "placeholderImage": "jednotka",
+      "placeholderDescription": "-",
+      "count": 6,
       "image": "https://whelkblog.files.wordpress.com/2012/05/mam-tor-gateway.jpg"
     },
     {
       "name": "Brána",
-      "description": "Brání vstupu nepřátel. Leží vždy mezi cestou a nádvořím",
-      "count": 2,
+      "cost": "-",
       "toughness": 3,
       "isUnderground": false,
+      "requirements": "-",
+      "description": "Brání vstupu nepřátel. Leží vždy mezi cestou a nádvořím",
+      "placeholders": 1,
+      "placeholderImage": "jednotka",
+      "placeholderDescription": "-",
+      "count": 2,
       "image": "http://www.britainexpress.com/images/attractions/editor3/Markenfield-Hall-5958.jpg"
     },
     {
       "name": "Trůnní sál",
-      "description": "Každý hrad musí mít právě jeden. Pokud je obsazen, hrad je ztracen",
-      "count": 1,
+      "cost": "-",
       "toughness": "-",
       "isUnderground": false,
+      "requirements": "-",
+      "description": "Trůnní sál je srdcem hradu. Pokud je obsazen, hrad je ztracen.",
+      "placeholders": 0,
+      "placeholderImage": "-",
+      "placeholderDescription": "-",
+      "count": 1,
       "image": "https://pre00.deviantart.net/81c3/th/pre/f/2015/187/9/f/wwe_immortals___throne_room_02_by_shogun_3d-d9072g1.jpg"
     }
   ],
   "units": [
     {
       "name": "Pěchota",
-      "cost": "1x železo, 1x dřevo, 1x zlato",
-      "toughness": 3,
-      "defense": 1,
+      "cost": "1x železo, 1x zlato",
+      "toughness": 2,
+      "defense": "-",
       "attack": 1,
       "range": 1,
-      "movement": 1,
+      "movement": "-",
       "count": 6,
       "requirements": "Kasárna, místo v kasárně",
       "type": "Pěchota",
-      "description": "Základní vojenská jednotka schopná útoku na blízko. +1 obrana proti jízdě. Mohou přemostit příkop. Mohou přistavit žebříky k hradbám.",
+      "description": "Základní vojenská jednotka schopná útoku na blízko. +1 obrana proti jízdě. Mohou přemostit příkop.",
       "image": "https://i.pinimg.com/originals/8c/e2/ae/8ce2aef26e4c0cd270a342f51a46a6d2.jpg"
     },
     {
       "name": "Střelci",
       "cost": "2x dřevo, 1x zlato",
-      "toughness": 2,
-      "defense": 0,
+      "toughness": 1,
+      "defense": "-",
       "attack": 1,
       "range": 2,
-      "movement": 1,
+      "movement": "-",
       "count": 6,
       "requirements": "Střelnice, místo v kasárně",
       "type": "Střelci",
-      "description": "Vojenská jednotka schopná útoku na dálku. Ve věži mají +1 dostřel a jsou nezranitelní nepřátelskými lukostřelci",
+      "description": "Vojenská jednotka schopná útoku na dálku. Ve věži mají +1 dostřel a jsou nezranitelní nepřátelskými lukostřelci.",
       "image": "https://kek.gg/i/5r76QW.jpeg"
     },
     {
       "name": "Jízda",
       "cost": "2x železo, 2x zlato",
-      "toughness": 5,
-      "defense": 2,
+      "toughness": 3,
+      "defense": "-",
       "attack": 2,
       "range": 1,
-      "movement": 2,
+      "movement": "-",
       "count": 6,
       "requirements": "Stáje, místo v kasárně",
       "type": "Jízda",
-      "description": "vojenská jednotka s delším dojezdem",
+      "description": "Může se pohnout o jedno pole po útoku.",
       "image": "https://i.pinimg.com/originals/05/dc/11/05dc1199055fd327cba0dc6e6dd9da54.jpg"
     },
     {
       "name": "Hrdina",
       "cost": "-",
       "toughness": 5,
-      "defense": 2,
+      "defense": "-",
       "attack": 3,
       "range": 1,
-      "movement": 1,
+      "movement": "-",
       "count": 1,
       "requirements": "Volná komnata",
       "type": "Pěchota",
-      "description": "Hrdina je pěší jednotka. Jednotky, které jsou jedno políčko vedle hrdiny mají +1 útok",
+      "description": "Hrdina je pěší jednotka. Jednotky, které jsou jedno políčko vedle hrdiny mají +1 útok.",
       "image": "https://i.pinimg.com/originals/b8/7a/38/b87a385c855bcc5695288dfcc34eaa72.jpg"
     },
     {
       "name": "Křižáci",
       "cost": "-",
       "toughness": 4,
-      "defense": 2,
+      "defense": "-",
       "attack": 2,
       "range": 1,
-      "movement": 1,
+      "movement": "-",
       "count": 3,
       "requirements": "místo v kasárně",
       "type": "Pěchota",
-      "description": "Křižáci jsou těžká pěchota schopná útoku na blízko. Nemá výhodu proti jízdě, jinak má všechny dovednosti standartní pěchoty",
+      "description": "Křižáci jsou těžká pěchota schopná útoku na blízko. Nemá výhodu proti jízdě, jinak má všechny dovednosti standartní pěchoty.",
       "image": "https://i.pinimg.com/originals/c6/ce/16/c6ce165aa38bc7b97b7d6cae651cff4a.jpg"
     },
     {
       "name": "Jízdní střelci",
       "cost": "-",
       "toughness": 3,
-      "defense": 2,
+      "defense": "-",
       "attack": 1,
       "range": 2,
-      "movement": 2,
+      "movement": "-",
       "count": 3,
       "requirements": "Stáje, místo v kasárně",
       "type": "Střelci",
-      "description": "Jízdní střelci jsou rychlá jednotka, která může útočit na dálku.",
+      "description": "Jízdní střelci jsou rychlá jednotka, která může útočit na dálku. Může se pohnout o 1 pole po útoku.",
       "image": "https://i.pinimg.com/736x/28/27/d5/2827d56184057393fbeddb9362c9ca6e--fantasy-warrior-fantasy-rpg.jpg"
     },
     {
       "name": "Katapult",
       "cost": "3x dřevo, 1x kámen, 1x zlato",
-      "toughness": 2,
-      "defense": 0,
+      "toughness": 3,
+      "defense": "-",
       "attack": 1,
       "range": 2,
-      "movement": 1,
+      "movement": "-",
       "count": 2,
       "requirements": "Truhlář",
       "type": "Obléhací stroj",
@@ -308,10 +390,10 @@
       "name": "Trebuchet",
       "cost": "5x dřevo, 2x kámen, 2x zlato",
       "toughness": 2,
-      "defense": 0,
+      "defense": "-",
       "attack": 2,
       "range": 3,
-      "movement": 0,
+      "movement": "-",
       "count": 2,
       "requirements": "Truhlář",
       "type": "Obléhací stroj",
@@ -322,10 +404,10 @@
       "name": "Beranidlo",
       "cost": "5x dřevo, 1x zlato",
       "toughness": 2,
-      "defense": 0,
+      "defense": "-",
       "attack": 1,
       "range": 1,
-      "movement": 1,
+      "movement": "-",
       "count": 1,
       "requirements": "Truhlář",
       "type": "Obléhací stroj",
@@ -343,7 +425,7 @@
       "count": 1,
       "requirements": "Volná dílna, místo ve světnici",
       "type": "Osoba",
-      "description": "Budovy, které stojí 2x dřevo a více stojí o 1x dřevo méně. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
+      "description": "Budovy, které stojí 2x dřevo a více stojí o 1x dřevo méně. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Umožňuje stavět obléhací stroje. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
       "image": "https://i.pinimg.com/originals/33/ba/d5/33bad5c9a618b4172091d5db40ef8946.jpg"
     },
     {
@@ -357,7 +439,7 @@
       "count": 1,
       "requirements": "Místo v kostele",
       "type": "Osoba",
-      "description": "Každé kolo uzdraví jedno zranění. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
+      "description": "Za 1x jídlo obnoví až 2x odolnost. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
       "image": "https://i.pinimg.com/originals/41/48/da/4148da4e5a4a5e846cab6c3df4501b4e.jpg"
     },
     {
@@ -429,6 +511,82 @@
       "type": "Osoba",
       "description": "Během bitvy můžete jednou požádat o jednu jednotku pěchoty, střelců nebo jízdy. Během sklizně dostanete navíc 2x dřevo, 2x kámen, 2x jídlo, 1x kov nebo 1x zlato dle svého výběru. Položte tuto kartu mimo hru a nevracejte jí do hry ani když o osobu přijdete.",
       "image": "https://i.pinimg.com/originals/e7/81/dd/e781dd32f64a7b13144726f569df391f.jpg"
+    },
+    {
+      "name": "Nájezdníci",
+      "cost": "-",
+      "toughness": 3,
+      "defense": "-",
+      "attack": 1,
+      "range": 1,
+      "movement": "-",
+      "count": 1,
+      "requirements": "-",
+      "type": "Jízda",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/a0/7a/cb/a07acbd4775c16fdf564f5c6b9c4040a.jpg"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Hrabě",
+      "startingResources": "1x dřevo, 1x kámen, 1x železo, 1x zlato",
+      "placeholderCount": 6,
+      "placeholderType": "surovina",
+      "advantage": "-",
+      "disadvantage": "-",
+      "description": "Pouze při hře jednoho hráče",
+      "image": "http://dragonagerpg.weebly.com/uploads/2/4/5/7/24577054/3823828.jpg?513"
+    },
+    {
+      "name": "Lord",
+      "startingResources": "4x zlato",
+      "placeholderCount": 5,
+      "placeholderType": "zlato",
+      "advantage": "Má na výběr z 8 příležitostí a může podržet až 4 příležitosti do dalšího kola",
+      "disadvantage": "Lord ve své zásobě nemůže držet jiné suroviny než Zlato",
+      "description": "-",
+      "image": "https://vignette.wikia.nocookie.net/dragonage/images/4/4f/Humans_-_Noble.jpg/revision/latest?cb=20090628180718"
+    },
+    {
+      "name": "Vojevůdce",
+      "startingResources": "2x dřevo, 3x železo",
+      "placeholderCount": 5,
+      "placeholderType": "surovina",
+      "advantage": "Při najímání jednotek nemusí zaplatit jeden kus požadované suroviny nebo zlata.",
+      "disadvantage": "Vojevůdce nemůže využívat výhod řemeslných osob (Truhlář, Kameník, Kovář, Obchodník)",
+      "description": "-",
+      "image": "https://i.pinimg.com/originals/64/2f/c7/642fc7c4115657151bdff39831d9dcff.jpg"
+    },
+    {
+      "name": "Biskup",
+      "startingResources": "1x dřevo, 2x kámen, 1x zlato",
+      "placeholderCount": 5,
+      "placeholderType": "surovina",
+      "advantage": "Splněné příležitosti, které dávají suroviny nebo zlato za odměnu dávají Biskupovi o 3 více (dle vlastního výběru).",
+      "disadvantage": "Najímání jednotek stojí navíc 1x jídlo",
+      "description": "-",
+      "image": "http://dragonagerpg.weebly.com/uploads/2/4/5/7/24577054/3823828.jpg?513"
+    },
+    {
+      "name": "Předák",
+      "startingResources": "2x dřevo, 2x kámen, 1x železo",
+      "placeholderCount": 5,
+      "placeholderType": "surovina",
+      "advantage": "Hradní osada produkuje +1 Kámen nebo +1 Dřevo.",
+      "disadvantage": "Nesmí najímat vojenské jednotky.",
+      "description": "-",
+      "image": "https://i.pinimg.com/originals/d5/da/f1/d5daf10da972eeec4ac81d278a36d7b9.jpg"
+    },
+    {
+      "name": "Špeh",
+      "startingResources": "1x Dřevo, 1x Železo, 2x zlato",
+      "placeholderCount": 5,
+      "placeholderType": "surovina",
+      "advantage": "1x za kolo se může podívat na další kartu události a vybrat si, jestli jí tam chce nechat, nebo odhodit na odhazovací balíček.",
+      "disadvantage": "Plnění příležitostí ho stojí o 1 libovolnou surovinu víc.",
+      "description": "-",
+      "image": "https://i.pinimg.com/originals/bc/83/02/bc830220dc642c0bb5789cb0e1da9a34.jpg"
     }
   ],
   "opportunities": [
@@ -437,7 +595,6 @@
       "description": "(počáteční vesnice)",
       "cost": "-",
       "award": "1x kámen, 1x dřevo za kolo",
-      "notes": "kámen a dřevo každé kolo",
       "type": "Osada",
       "image": "https://pre00.deviantart.net/f26b/th/pre/f/2017/327/2/9/rog_scene_6_sketch2_by_lucy_lisett-dbum7pl.jpg"
     },
@@ -446,7 +603,6 @@
       "description": "Požár zachvátil vesnici u kamenolomu a ta lehla popelem. Pokud pošlete dřevo, můžete vesnici obnovit a bude vám dodávat kámen.",
       "cost": "6x dřevo",
       "award": "1x kámen za kolo",
-      "notes": "kámen každé kolo",
       "type": "Osada",
       "image": "https://pre00.deviantart.net/f26b/th/pre/f/2017/327/2/9/rog_scene_6_sketch2_by_lucy_lisett-dbum7pl.jpg"
     },
@@ -455,7 +611,6 @@
       "description": "Ve dřevařské oboře nemají mlýn. Když jim pošlete materiál na jeho stavbu, budou vám posílat pravidelně dřevo.",
       "cost": "4x kámen",
       "award": "1x dřevo za kolo",
-      "notes": "dřevo každé kolo",
       "type": "Osada",
       "image": "https://pre00.deviantart.net/f26b/th/pre/f/2017/327/2/9/rog_scene_6_sketch2_by_lucy_lisett-dbum7pl.jpg"
     },
@@ -464,7 +619,6 @@
       "description": "Loupežníci přepadávají karavany na obchodní cestě. Pošlete sem stráže a můžete vybírat mítné.",
       "cost": "3x vojenská jednotka",
       "award": "1x zlato za kolo",
-      "notes": "zlato každé kolo",
       "type": "Osada",
       "image": "https://pre00.deviantart.net/f26b/th/pre/f/2017/327/2/9/rog_scene_6_sketch2_by_lucy_lisett-dbum7pl.jpg"
     },
@@ -473,7 +627,6 @@
       "description": "Barbaři vyplenili místní kostel. Pokud za nimi hned vyšlete jízdu můžete od krále výměnou za ukradené relikvie získát odměnu ve zlatě.",
       "cost": "1x jízda",
       "award": "5x zlato",
-      "notes": "zlato pokud máte jízdu",
       "type": "Směna",
       "image": "https://i.pinimg.com/originals/a7/85/06/a78506e4f7c47fd5f75bbd0c55576a07.jpg"
     },
@@ -482,7 +635,6 @@
       "description": "Sousední revír potřebuje myslivce. Když pošlete jednotku střelců, můžete si nechat odlovenou zvěř.",
       "cost": "1x střelci",
       "award": "5x jídlo",
-      "notes": "jídlo za lučištníky",
       "type": "Směna",
       "image": "https://i.pinimg.com/originals/a7/85/06/a78506e4f7c47fd5f75bbd0c55576a07.jpg"
     },
@@ -491,7 +643,6 @@
       "description": "Po vichřici zbylo spousta vyvrácených stromů. Pošlete jednu vojenskou jednotku na pomoc při odstranění následků pohromy a dostanete za odměnu hromadu dřeva.",
       "cost": "1x vojenská jednotka",
       "award": "6x dřevo",
-      "notes": "dřevo za vojenskou jednotku",
       "type": "Směna",
       "image": "https://i.pinimg.com/originals/a7/85/06/a78506e4f7c47fd5f75bbd0c55576a07.jpg"
     },
@@ -500,7 +651,6 @@
       "description": "Starosta kamenické osady by rád najal stráže výměnou za hromadu kamení.",
       "cost": "1x pěchota",
       "award": "6x kámen",
-      "notes": "kámen za vojenskou jednotku",
       "type": "Směna",
       "image": "https://i.pinimg.com/originals/a7/85/06/a78506e4f7c47fd5f75bbd0c55576a07.jpg"
     },
@@ -509,7 +659,6 @@
       "description": "V kamenolomu shání nové povozy výměnou za náklad kamení.",
       "cost": "4x dřevo",
       "award": "6x kámen",
-      "notes": "kámen za dřevo",
       "type": "Směna",
       "image": "https://i.pinimg.com/originals/a7/85/06/a78506e4f7c47fd5f75bbd0c55576a07.jpg"
     },
@@ -518,7 +667,6 @@
       "description": "Bohatý obchodník se zbraněmi shání dřevo na stavbu obchodní lodě výměnou za náklad vojenského vybavení.",
       "cost": "6x dřevo",
       "award": "3x kov",
-      "notes": "kov za dřevo",
       "type": "Směna",
       "image": "https://i.pinimg.com/originals/a7/85/06/a78506e4f7c47fd5f75bbd0c55576a07.jpg"
     },
@@ -527,7 +675,6 @@
       "description": "Král nabízí zlato za brnění pro svou těžkou pěchotu.",
       "cost": "3x kov",
       "award": "6x zlato",
-      "notes": "zlato za kov",
       "type": "Směna",
       "image": "https://i.pinimg.com/originals/a7/85/06/a78506e4f7c47fd5f75bbd0c55576a07.jpg"
     },
@@ -536,7 +683,6 @@
       "description": "Dřevorubci prosí o postavení kamenného mostu přes řeku. Výměnou nabízí haldu dřeva.",
       "cost": "4x kámen",
       "award": "10x dřevo",
-      "notes": "dřevo za kámen",
       "type": "Směna",
       "image": "https://i.pinimg.com/originals/a7/85/06/a78506e4f7c47fd5f75bbd0c55576a07.jpg"
     },
@@ -545,16 +691,14 @@
       "description": "Žoldnéři vám přišly nabídnout své služby.",
       "cost": "2x zlato / jednotku",
       "award": "1-3x Pěchota",
-      "notes": "najmout pěchotu",
       "type": "Nábor - vojenská jednotka",
       "image": "https://i.pinimg.com/736x/a8/f0/5c/a8f05c787507da448e9921e3b57ab4ee--medieval-fantasy-dark-fantasy.jpg"
     },
     {
       "name": "Nájemní jezdci",
       "description": "Nájemní jezdci nabízí, že se přidají k vám za úplatu.",
-      "cost": "4x zlato / jednotku",
+      "cost": "3x zlato / jednotku",
       "award": "1-3x Jízda",
-      "notes": "najmout jízdu",
       "type": "Nábor - vojenská jednotka",
       "image": "https://i.imgur.com/RPUGm2p.jpg"
     },
@@ -563,7 +707,6 @@
       "description": "Pokud máte kapli, křižáci vám za úplatu budou sloužit.",
       "cost": "3x zlato",
       "award": "Křižáci jsou silnější varianta vojenské jednotky Pěchota. Nemá výhodu proti jízdě.",
-      "notes": "najmout křižáky",
       "type": "Nábor - vojenská jednotka",
       "image": "https://i.pinimg.com/originals/c6/ce/16/c6ce165aa38bc7b97b7d6cae651cff4a.jpg"
     },
@@ -572,7 +715,6 @@
       "description": "Slavný hrdina se svojí družinou zvažuje, že by se pridal k vaší armádě, když mu v jídelní hale vystrojíte velkolepou hostinu.",
       "cost": "8x jídlo",
       "award": "Hrdina je silnější varianta vojenské jednotky Pěchota. Jednotky, které jsou jedno políčko vedle hrdiny mají +1 útok. Nemá výhodu proti jízdě.",
-      "notes": "najmout hrdinu",
       "type": "Nábor - vojenská jednotka",
       "image": "https://i.pinimg.com/originals/b8/7a/38/b87a385c855bcc5695288dfcc34eaa72.jpg"
     },
@@ -581,7 +723,6 @@
       "description": "Skupina nájezdníků se k vám chce přidat za jídlo a žold.",
       "cost": "2x jídlo, 2x zlato",
       "award": "Jízdní střelci jsou rychlá střelecká vojenská jednotka.",
-      "notes": "najmout jízdní střelce",
       "type": "Nábor - vojenská jednotka",
       "image": "https://i.pinimg.com/736x/28/27/d5/2827d56184057393fbeddb9362c9ca6e--fantasy-warrior-fantasy-rpg.jpg"
     },
@@ -589,8 +730,7 @@
       "name": "Kroužková zbroj",
       "description": "Kroužková zbroj zvýší odolnost všech vašich jednotek",
       "cost": "6x železo",
-      "award": "Pěchota, Střelci a Jízda +1 obrana",
-      "notes": "vylepšení obrany všech jednotek",
+      "award": "Pěchota, Střelci a Jízda permanentě +1 odolnost",
       "type": "Vylepšení",
       "image": "http://www.zbrushcentral.com/attachment.php?attachmentid=522911"
     },
@@ -599,7 +739,6 @@
       "description": "Nové meče a kopí z kalené ocele jsou tvrdší a udrží déle ostří než železné zbraně vaší pěchoty a jízdy.",
       "cost": "6x železo",
       "award": "Pěchota a Jízda +1 útok",
-      "notes": "lepší útok pěchoty",
       "type": "Vylepšení",
       "image": "http://www.zbrushcentral.com/attachment.php?attachmentid=522911"
     },
@@ -607,8 +746,7 @@
       "name": "Samostříly",
       "description": "Tyto kuše dokážou prorazit dokonce i kovové brnění",
       "cost": "4x dřevo, 4x železo",
-      "award": "Střelci +1 útok",
-      "notes": "lepší útok střelců",
+      "award": "Střelci permanentně +1 útok",
       "type": "Vylepšení",
       "image": "http://www.zbrushcentral.com/attachment.php?attachmentid=522911"
     },
@@ -616,8 +754,7 @@
       "name": "Jízdní kopí",
       "description": "Tato dlouhá kopí dávají jízdě neuvěřitelnou průraznost ",
       "cost": "4x dřevo, 4x železo",
-      "award": "Jízda +2 útok",
-      "notes": "lepší útok jízdy",
+      "award": "Jízda permanentně +2 útok",
       "type": "Vylepšení",
       "image": "http://www.zbrushcentral.com/attachment.php?attachmentid=522911"
     },
@@ -625,26 +762,31 @@
       "name": "Mříže",
       "description": "Mříže poskytují dodatečnou překážku pro útočící vojsko. Během jich překonávání na útočníky mohou obránci déle střílet.",
       "cost": "2x dřevo, 2x železo",
-      "award": "Brána +2 odolnost",
-      "notes": "lepší odolnost brány",
+      "award": "Brána permanentně +2 odolnost",
       "type": "Vylepšení",
       "image": "http://www.zbrushcentral.com/attachment.php?attachmentid=522911"
     },
     {
       "name": "Bašta",
       "description": "Bašty vystupují z linie hradby a působí, jako dodatečný zpevňující prvek.",
-      "cost": "10x kámen",
-      "award": "Věž +1 odolnost",
-      "notes": "lepší odolnost věží",
+      "cost": "5x kámen",
+      "award": "Věž permanentně +1 odolnost",
       "type": "Vylepšení",
       "image": "http://www.zbrushcentral.com/attachment.php?attachmentid=522911"
+    },
+    {
+      "name": "Domobrana",
+      "description": "Jednorázové použití v bitvě: V každé osadě se objeví 1x Pěchota.",
+      "cost": "4x jídlo, 4x železo",
+      "award": "Nepřátelské jednotky před branami ztrácejí 4x odolnost",
+      "type": "Akce",
+      "image": "https://i.pinimg.com/originals/d6/78/35/d6783549fb0d37f6b0bc0e58c7bfc6fe.jpg"
     },
     {
       "name": "Zápalné šípy",
       "description": "Zápalné šípy působí hrozbu i pro jinak odolné obléhací stroje.",
       "cost": "2x zlato",
-      "award": "na jedno kolo mohou střelci poškodit obléhací stroje",
-      "notes": "útok lučištníků na obléhací stroje",
+      "award": "Na jedno kolo mohou střelci poškodit obléhací stroje",
       "type": "Akce",
       "image": "https://i.pinimg.com/originals/d6/78/35/d6783549fb0d37f6b0bc0e58c7bfc6fe.jpg"
     },
@@ -652,8 +794,7 @@
       "name": "Horký olej",
       "description": "Málokdo ustojí kotel plný vroucího oleje.",
       "cost": "4x jídlo",
-      "award": "nepřátelské jednotky před branami ztrácejí 4x odolnost",
-      "notes": "útok před bránu na cokoliv",
+      "award": "Nepřátelské jednotky před branami ztrácejí 4x odolnost",
       "type": "Akce",
       "image": "https://i.pinimg.com/originals/d6/78/35/d6783549fb0d37f6b0bc0e58c7bfc6fe.jpg"
     },
@@ -662,7 +803,6 @@
       "description": "Váš spojenec žádá o posily. Když mu vyhovíte, rád vám v případě nouze laskavost oplatí.",
       "cost": "1x jízda",
       "award": "Během bitvy můžete jednorázově požádat o jednu jednotku pěchoty, střelců nebo jízdy, kterou můžete ihned umístit na libovolné políčko",
-      "notes": "jednorázové posily",
       "type": "Akce",
       "image": "https://i.pinimg.com/originals/d6/78/35/d6783549fb0d37f6b0bc0e58c7bfc6fe.jpg"
     },
@@ -671,70 +811,62 @@
       "description": "Tlející mršina šíří nemoci a její smrad má značný efekt na bojovou morálku kohokoliv poblíž.",
       "cost": "4x jídlo",
       "award": "Pomocí trebuchetu můžete jednorázově vystřelit mršinu na pole v dosahu. Jednotky na tomto poli ztrácejí každé kolo 1x odolnost do konce bitvy",
-      "notes": "jednotky na poli dostávají každé kolo 1 zranění",
       "type": "Akce",
       "image": "https://i.pinimg.com/originals/d6/78/35/d6783549fb0d37f6b0bc0e58c7bfc6fe.jpg"
     },
     {
       "name": "Truhlář",
-      "description": "Truhlář by si u vás rád zařídil živobytí, pokud máte volnou dílnu a místo ve světnici",
+      "description": "Truhlář by si u vás rád zařídil živobytí, pokud máte volnou Dílnu",
       "cost": "-",
       "award": "Budovy, které stojí 2x dřevo a více stojí o 1x dřevo méně. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
-      "notes": "osoba",
       "type": "Nábor - osoba",
       "image": "https://i.pinimg.com/originals/33/ba/d5/33bad5c9a618b4172091d5db40ef8946.jpg"
     },
     {
       "name": "Kněz",
-      "description": "Kněz by u vás rád svolával mše, pokud máte volno v kapli, kostele, nebo katedrále",
+      "description": "Kněz by u vás rád svolával mše, pokud máte Kapli",
       "cost": "-",
       "award": "Každé kolo uzdraví jedno zranění. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
-      "notes": "osoba",
       "type": "Nábor - osoba",
       "image": "https://i.imgur.com/mb5TdcV.jpg"
     },
     {
       "name": "Kameník",
-      "description": "Kameník by si u vás rád zařídil živobytí, pokud máte volnou dílnu a místo ve světnici",
+      "description": "Kameník by si u vás rád zařídil živobytí, pokud máte volnou Dílnu",
       "cost": "-",
       "award": "Budovy, které stojí 2x kámen a více stojí o 1x kámen méně. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
-      "notes": "osoba",
       "type": "Nábor - osoba",
       "image": "http://static.wixstatic.com/media/d69d78_edabeb32235c421c989474859387b33f.jpg/v1/fill/w_515,h_410,al_c,q_80,usm_0.66_1.00_0.01/d69d78_edabeb32235c421c989474859387b33f.webp"
     },
     {
       "name": "Kovář",
-      "description": "Kovář by si u vás rád zařídil živobytí, pokud máte volnou dílnu a místo ve světnici. Za 2x dřevo vyrobí 1x železo",
+      "description": "Kovář by si u vás rád zařídil živobytí, pokud máte volnou Dílnu. Za 2x dřevo vyrobí 1x železo",
       "cost": "-",
       "award": "Za 2x dřevo produkuje 1x železo. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
-      "notes": "osoba",
       "type": "Nábor - osoba",
       "image": "https://static.giantbomb.com/uploads/scale_small/1/17172/1248410-blacksmith.png"
     },
     {
       "name": "Obchodník",
-      "description": "Obchodník by k vám rád začal dovážet zboží, pokud pro něj máte místo ve světnici. Jednou za kolo dokáže vyměnit 1 zlato za 2 jiné suroviny",
+      "description": "Obchodník by k vám rád začal dovážet zboží, pokud máte Tržiště. Jednou za kolo dokáže vyměnit 1x zlato za 2 jiné suroviny",
       "cost": "-",
-      "award": "Jednou za kolo dokáže vyměnit 1x zlato za 2 jiné suroviny. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
-      "notes": "osoba",
+      "award": "Libovolněkrát za kolo můžete vyměnit 1x zlato za 2 jiné suroviny. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
       "type": "Nábor - osoba",
       "image": "https://pre00.deviantart.net/a3f6/th/pre/i/2014/116/b/0/lord_character_concept_by_skworus-d7g1y0z.jpg"
     },
     {
       "name": "Výběrčí daní",
-      "description": "Král vám může přidělit výběrčího daní, pokud máte pokladnici a místo ve světnici.",
+      "description": "Král vám může přidělit výběrčího daní, pokud máte Pokladnici.",
       "cost": "-",
-      "award": "Na konci roku přinese tolik zlata, kolik máte držav. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
-      "notes": "osoba",
+      "award": "Při události Daně přináší každá osada 2x zlato. Položte tuto kartu mimo hru, dokud máte tuto osobu ve hradu. Pokud o osobu přijdete vraťte tuto kartu na odhazovací balíček příležitostí.",
       "type": "Nábor - osoba",
       "image": "https://i.pinimg.com/originals/2c/bf/30/2cbf307f5bbeca4696aef8c6aed46c90.jpg"
     },
     {
       "name": "Šlechtic",
-      "description": "Tento urozený šlechtic by byl cenným spojencem, pokud máte volnou komnatu a provdáte mu svojí dceru s bohatým věnem.",
-      "cost": "8x zlato",
-      "award": "1x během bitvy můžete získat 1x Pěchota / Střelci / Jízda. Během sklizně dostanete 1x dřevo / 1x kámen / 1x jídlo / 1x kov / 1x zlato. Položte tuto kartu trvale mimo hru.",
-      "notes": "osoba",
+      "description": "Tento urozený šlechtic by byl cenným spojencem, pokud máte volnou Komnatu a provdáte mu svojí dceru s bohatým věnem.",
+      "cost": "6x zlato",
+      "award": "1x během bitvy můžete získat 1x Pěchota / Střelci / Jízda. Během sklizně dostanete 1x dřevo / 1x kámen / 1x jídlo / 1x železo / 1x zlato. Položte tuto kartu trvale mimo hru.",
       "type": "Nábor - osoba",
       "image": "https://i.pinimg.com/originals/e7/81/dd/e781dd32f64a7b13144726f569df391f.jpg"
     }
@@ -743,7 +875,7 @@
     {
       "name": "Žold",
       "count": 1,
-      "description": "Je na čase zaplatit vojákům žold 1x zlato za jednotku. Jednotky, na které nevyjde budou rozpuštěny."
+      "description": "Je na čase zaplatit vojákům žold. Do konce kola zaplaťte 1x zlato za každé 2 jednotky. Jednotky, na které nevyjde budou rozpuštěny."
     },
     {
       "name": "Že by psa nevyhnal",
@@ -752,12 +884,12 @@
     },
     {
       "name": "Daně",
-      "count": 1,
+      "count": 2,
       "description": "Dostanete tolik zlata, kolik máte osad"
     },
     {
       "name": "Medikus",
-      "count": 1,
+      "count": 0,
       "description": "Za 1x zlato můžete uzdravit až 3x odolnost"
     },
     {
@@ -773,7 +905,7 @@
     {
       "name": "Špatná úroda",
       "count": 1,
-      "description": "Poddaní trpí hlady kvůli spatné úrodě. Zaplať 1x jídlo za každou osobu. Osoby, kteřé jídlo nedostanou, opustí hrad. "
+      "description": "Poddaní trpí hlady kvůli spatné úrodě. Na konci kola každá osoba spotřebuje 1x jídlo. Osoby, kteřé jídlo nedostanou, opustí hrad. "
     },
     {
       "name": "Sklizeň",
@@ -788,12 +920,12 @@
     {
       "name": "Mrazy",
       "count": 1,
-      "description": "Udeřily mrazy. Každá vojenská jednotka a osoba spotřebuje 1x dřevo. Jednotky a osoby, které dřevo nedostanou opustí hrad."
+      "description": "Udeřily mrazy. Na konci kola každá vojenská jednotka a osoba spotřebuje 1x dřevo. Jednotky a osoby, které dřevo nedostanou opustí hrad."
     },
     {
       "name": "Oslavy",
       "count": 1,
-      "description": "Vesničané prinesli suroviny na oslavu výročí založení hradu. 1x drevo, 1x kamen, 1x železo, 3x jídlo "
+      "description": "Vesničané prinesli suroviny na oslavu výročí založení hradu. 1x dřevo, 1x kámen, 1x železo, 3x jídlo "
     },
     {
       "name": "Krysy",
@@ -816,6 +948,16 @@
       "description": "Pokud máte vojenskou jednotku v hradě, chytili jste zloděje a můžete za něj dostat 1x zlato prostřednictvím Žaláře. Pokud jednotky nemáte, zloději vám ukradnou všechny suroviny ve skladech kromě jedné (váš výběr)."
     },
     {
+      "name": "Scénář",
+      "count": 2,
+      "description": "(Pouze v kooperativní hře) Přečtěte další kartu scénáře."
+    },
+    {
+      "name": "Nájezdníci",
+      "count": 2,
+      "description": "Nájezdníci obsadili vaši osadu. Umístěte jednotku barbarů na libovolnou osadu, kromě hradní osady. Osada nenese suroviny, dokud jsou nájezdníci naživu. Viz. pravidla Nájezdníci."
+    },
+    {
       "name": "Scénář: V obležení (1)",
       "count": 1,
       "description": "Doneslo se k vám, že byly nedaleko spatřeny nepřátelští zvědi. Pravděpodobně se snaží odhadnout sílu naší obrany, ale bude chvíli trvat než se k vám dostanou"
@@ -823,7 +965,7 @@
     {
       "name": "Scénář: V obležení (2)",
       "count": 1,
-      "description": "Zadrželi jste zvěda, jak sleduje váš hrad. Pokud máte žalář, získáváte 3x zlato. Bohužel jeho komplici stihli utéct. Pokud jste měli v hradě 2 jednotky a tato karta byla zahrána poprvé, nemíchejte po dobrání balíčku událostí další kartu scénáře. Místo toho zamíchejte opět tuto kartu do balíčku událostí."
+      "description": "Zadrželi jste zvěda, jak sleduje váš hrad. Pokud máte žalář, získáváte 3x zlato. Bohužel jeho komplici stihli utéct."
     },
     {
       "name": "Scénář: V obležení (3)",

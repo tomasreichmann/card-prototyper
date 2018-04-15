@@ -31,7 +31,6 @@ const styles = (theme) => ({
 class UnitMiniUnstyled extends React.Component {
   render() {
     const { classes, ...cardProps } = this.props;
-    console.log('cardProps', cardProps);
     const card = <UnitCard {...cardProps} />;
     return (
       <Paper className={classes.root} >

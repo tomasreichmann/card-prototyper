@@ -66,7 +66,6 @@ class Index extends React.Component {
   };
 
   handleChange = path => event => {
-    console.log('event.target', event.target);
     const value = event.target.type === 'number' ? parseFloat(event.target.value) : event.target.value;
     const newState = set({...this.state}, path, value);
     this.setState(newState);
@@ -75,8 +74,6 @@ class Index extends React.Component {
   render() {
     const { classes } = this.props;
     const { open, card, page } = this.state;
-
-    console.log('this.state', this.state);
 
     return (
       <Layout title="Card Prototyper">

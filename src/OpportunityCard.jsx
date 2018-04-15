@@ -42,6 +42,7 @@ const styles = (theme) => ({
     alignItems: 'stretch',
   },
   costs: {
+    flex: '1 1 auto',
     minWidth: '1cm',
   },
   verticalBorder: {
@@ -51,6 +52,7 @@ const styles = (theme) => ({
   },
   award: {
     minWidth: '1cm',
+    flex: '1 1 auto',
     textAlign: 'right',
   },
   description: {
