@@ -5,7 +5,7 @@ import { range } from 'lodash';
 import classnames from 'classnames';
 
 import { grey } from 'material-ui/colors';
-import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-ui/Card';
+import Card, { CardMedia, CardContent, CardActions } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import { Resource } from './Resource';
 import { RichText } from './RichText';
@@ -37,7 +37,7 @@ const styles = (theme) => ({
     height: '2cm',
     borderRadius: '50%',
     border: `2px solid ${grey[600]}`,
-    margin: theme.spacing.unit/4,
+    margin: theme.spacing.unit / 4,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -105,7 +105,7 @@ class CharacterCardUnstyled extends React.Component {
 
     const placeholders = range(placeholderCount).map( (index) => (
       <div className={classes.placeholder} >
-        <Resource type={resourceStringMap[placeholderType]} />
+        <Resource type={resourceStringMap[placeholderType]} height="1.0cm"/>
       </div>
     ) );
 

@@ -78,11 +78,7 @@ class Index extends React.Component {
     return (
       <Layout title="Card Prototyper">
 
-        <p>
-          <RichText text="Umožňuje uskladnit suroviny, které hráči mohou sdílet a nemusí držet v ruce" />
-        </p>
-
-        {/* <form className={classnames(classes.hidePrint, classes.form)}>
+        <form className={classnames(classes.hidePrint, classes.form)}>
           <div className={classes.formGroup}>
             <Typography variant="headline" gutterBottom component="h2" >Cards ({cards.length})</Typography>
             <div className={classes.formGroupElements} >
@@ -162,7 +158,7 @@ class Index extends React.Component {
           </div>
         </form>
         <Divider className={classnames(classes.divider, classes.hidePrint)} />
-        <PrintSheet items={cards} itemMargin={0} itemFormat={card} pageFormat={page} /> */}
+        <PrintSheet items={cards} itemMargin={0} itemFormat={card} pageFormat={page} />
       </Layout>
     );
   }

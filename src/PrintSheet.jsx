@@ -1,12 +1,10 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
-import intersperse from 'intersperse';
 import { range } from 'lodash';
 import Paper from 'material-ui/Paper';
 import classnames from 'classnames';
 
 import { grey } from 'material-ui/colors';
-import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import Chip from 'material-ui/Chip';
 
@@ -97,7 +95,7 @@ class PrintSheetUnstyled extends React.Component {
   }
 
   render() {
-    const { limits, pageFormat, itemFormat, items, pageMargin, itemMargin, pageLandscape, itemLandscape } = this.props;
+    const { limits, pageFormat, itemFormat, items, pageMargin, itemMargin, pageLandscape, itemLandscape, classes } = this.props;
     const page = this.resolveFormat(pageFormat, pageLandscape);
     const item = this.resolveFormat(itemFormat, itemLandscape);
 
@@ -112,7 +110,6 @@ class PrintSheetUnstyled extends React.Component {
 
     const pageCount = Math.min(Math.ceil(items.length / itemsPerPage), limits.pages);
 
-    const { classes, name, cost, toughness, requirements, description } = this.props;
     return (<div className={classes.root}>
       <Typography gutterBottom component="p" variant="headline" className={classnames(classes.summary, classes.hidePrint)} >{itemsPerPage} items per page, {pageCount} pages in total</Typography>
       { range(pageCount).map( pageIndex => (

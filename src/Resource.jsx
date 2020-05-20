@@ -11,7 +11,6 @@ const styles = (theme) => ({
   },
   statIcon: {
     display: 'inline',
-    height: '0.5cm',
     verticalAlign: 'middle',
   },
   statLabel: {
@@ -22,15 +21,21 @@ const styles = (theme) => ({
 });
 
 class ResourceUnstyled extends React.Component {
+  static defaultProps = {
+    height: '0.5cm',
+  }
+
   render() {
-    const { classes, type, amount, relative } = this.props;
+    const { classes, type, amount, relative, height } = this.props;
     return (
       <span className={classes.statItem} >
         { (amount || relative)
           ? <Typography component="span" className={classes.statLabel}>{relative}{amount}</Typography>
           : null
         }
-        <img className={classes.statIcon} src={`/static/${type}.png`} />
+        <img className={classes.statIcon} src={`/static/${type}.png`} style={{
+          height,
+        }}/>
       </span>
     )
   }

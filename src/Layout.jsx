@@ -55,6 +55,7 @@ class LayoutUnstyled extends React.Component {
             <Link href="/units" ><Button component="a" color="inherit">Units</Button></Link>
             <Link href="/opportunities" ><Button component="a" color="inherit">Opportunities</Button></Link>
             <Link href="/events" ><Button component="a" color="inherit">Events</Button></Link>
+            <Link href="/scenarios" ><Button component="a" color="inherit">Scenarios</Button></Link>
           </Toolbar>
         </AppBar>
         <div className={classes.main}>

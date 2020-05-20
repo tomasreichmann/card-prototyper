@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^1.0.0",
     "intersperse": "^1.0.0",
     "jss": "latest",
     "lodash": "^4.17.5",
-    "material-ui": "next",
+    "material-ui": "^1.0.0-beta.47",
     "material-ui-icons": "^1.0.0-beta.36",
     "next": "latest",
     "prop-types": "latest",
